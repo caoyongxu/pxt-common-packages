@@ -230,12 +230,13 @@ namespace light {
          * You need to call ``show`` to make the changes visible.
          * @param pixeloffset position of the NeoPixel in the strip
          * @param color RGB color of the LED
+         * @param brightness (optional) brightness value for this specific pixel
          */
         //% blockId="neopixel_set_pixel_color" block="%strip|set pixel color at %pixeloffset|to %rgb=colorNumberPicker"
         //% help="light/set-pixel-color"
         //% parts="neopixel"
         //% weight=79
-        setPixelColor(pixeloffset: number, color: number): void {
+        setPixelColor(pixeloffset: number, color: number, brightness: number = undefined): void {
             pixeloffset = pixeloffset >> 0;
             if (pixeloffset < 0
                 || pixeloffset >= this._length)
@@ -247,6 +248,8 @@ namespace light {
             const green = unpackG(color);
             const blue = unpackB(color);
             this.setBufferRGB(pixeloffset, red, green, blue)
+            if (brightness !== undefined)
+                this.brightnessBuf[this._start + pixeloffset] = Math.max(0, Math.min(0xff, brightness >> 0));
             this.autoShow();
         }
 
