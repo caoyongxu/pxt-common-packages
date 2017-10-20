@@ -12,6 +12,7 @@ light.pixels.setPixelColor(0, 0)
 * **pixelOffset**: the position on the strip (or the board) of the pixel whose
 color you want to change.
 * **color**: an [RGB](/reference/light/rgb#rgbdesc) color to change the pixel to.
+* **brightness**: (optional) a brightness from ``0`` (dark) to ``255`` (bright) for this pixel
 
 ## Example #exsection
 
