@@ -6,6 +6,7 @@
         "neopixel.cpp",
         "neopixel.ts",
         "create.ts",
+        "animations.ts",
         "shims.d.ts",
         "enums.d.ts",
         "ns.ts",
