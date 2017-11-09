@@ -1,5 +1,7 @@
 #include "pxt.h"
 
+extern void device_heap_print();
+
 namespace control {
 
 /**
@@ -30,4 +32,13 @@ String deviceDalVersion() {
 int allocateNotifyEvent() {
     return ::allocateNotifyEvent();
 }
+
+/**
+* print out info about state of CODAL heap
+*/o
+//% block
+void deviceHeapPrint() {
+    device_heap_print();
+}
+
 }
