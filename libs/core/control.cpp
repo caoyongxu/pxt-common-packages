@@ -35,7 +35,7 @@ int allocateNotifyEvent() {
 
 /**
 * print out info about state of CODAL heap
-*/o
+*/
 //% block
 void deviceHeapPrint() {
     device_heap_print();
