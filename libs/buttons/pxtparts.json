@@ -1,0 +1,31 @@
+{
+    "buttons": {
+        "simulationBehavior": "buttons",
+        "visual": {
+            "builtIn": "buttons",
+            "width": 75,
+            "height": 45,
+            "pinDistance": 15,
+            "pinLocations": [
+                {"x": 0, "y": 0},
+                {"x": 30, "y": 45}
+            ]
+        },
+        "numberOfPins": 2,
+        "pinDefinitions": [
+            {"target": "ground", "style": "male", "orientation": "-Z"},
+            {"target": {"pinInstantiationIdx": 0}, "style": "male", "orientation": "-Z"}
+        ],
+        "instantiation": {
+            "kind": "function",
+            "fullyQualifiedName": "Button.onEvent",
+            "argumentRoles": [
+                {"pinInstantiationIdx": 0, "partParameter": "button"}
+            ]
+        },
+        "assembly": [
+            {"part": true},
+            {"pinIndices": [0, 1]}
+        ]
+    }    
+}

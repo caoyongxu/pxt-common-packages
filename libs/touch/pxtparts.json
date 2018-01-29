@@ -1,0 +1,30 @@
+{
+    "touch": {
+        "simulationBehavior": "touch",
+        "visual": {
+            "builtIn": "touch",
+            "width": 75,
+            "height": 45,
+            "pinDistance": 15,
+            "pinLocations": [
+                {"x": 0, "y": 0},
+                {"x": 30, "y": 45}
+            ]
+        },
+        "numberOfPins": 1,
+        "pinDefinitions": [
+            {"target": {"pinInstantiationIdx": 0}, "style": "crocclip", "orientation": "-Z"}
+        ],
+        "instantiation": {
+            "kind": "function",
+            "fullyQualifiedName": "TouchButton.onEvent",
+            "argumentRoles": [
+                {"pinInstantiationIdx": 0, "partParameter": "button"}
+            ]
+        },
+        "assembly": [
+            {"part": true},
+            {"pinIndices": [0]}
+        ]
+    }    
+}
